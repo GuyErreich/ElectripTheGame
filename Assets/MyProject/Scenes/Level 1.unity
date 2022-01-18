@@ -14701,7 +14701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00036621094, y: -5.3551636}
+  m_AnchoredPosition: {x: -0.00036621094, y: -5.3551025}
   m_SizeDelta: {x: -0.00066518784, y: -10.7097225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538187168
@@ -31540,8 +31540,8 @@ MonoBehaviour:
   curvePoint: {fileID: 1151766963}
   timeManager: {fileID: 332448544}
   useGravity: 1
-  throwPower: 70
-  launchPower: 150
+  throwPower: 35
+  launchPower: 70
 --- !u!114 &1022566855
 MonoBehaviour:
   m_ObjectHideFlags: 0

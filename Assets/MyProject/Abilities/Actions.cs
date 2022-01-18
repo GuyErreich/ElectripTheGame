@@ -31,7 +31,7 @@ namespace FirstUnityGame.Assets.MyProject.Abilities
             else
                 direction = Camera.main.transform.forward;
 
-            weaponRb.AddForce(direction * abilitySystem.ThrowPower * 100f * Time.unscaledDeltaTime, ForceMode.VelocityChange);
+            weaponRb.AddForce(direction * abilitySystem.ThrowPower * 100f * Time.fixedUnscaledDeltaTime, ForceMode.VelocityChange);
         }
 
         public static IEnumerator PullWeapon(AbilitySystem abilitySystem)
@@ -72,9 +72,9 @@ namespace FirstUnityGame.Assets.MyProject.Abilities
             characterRb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
             // characterRb.isKinematic = true;
             // TODO: Ask the teacher about how to add force to the default fps controller
-            Vector3 direction = (weaponPosition - character.transform.position) * 1.15f;
+            Vector3 direction = (weaponPosition - character.transform.position);
             direction.y = direction.y * 1.25f;
-            characterRb.AddForce(direction * launchPower * 100f * Time.unscaledDeltaTime, ForceMode.Impulse);
+            characterRb.AddForce(direction * launchPower * 100f * Time.fixedUnscaledDeltaTime, ForceMode.Impulse);
         }
 
         private static Vector3 GetQuadraticCurvePoint(float t, Vector3 p0, Vector3 p1, Vector3 p2)
